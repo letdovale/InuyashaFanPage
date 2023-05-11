@@ -1,0 +1,256 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --preto-secundario: #000000;
+    --cor-geleia: #DB5A42;
+    --cor-geleia-claro: #E3A587;
+    --fonte-principal: 'Arimo';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--fonte-principal);
+    width: 100vw;
+}
+
+.inicio {
+    background-image: url(img/Plano\ de\ fundo.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+.menu_inicio {
+    width: 100vw;
+    position:fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    
+}
+.menu_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+
+}
+
+li {
+    padding-right: 1.5em;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+li a:hover{
+    text-decoration:underline;
+
+}
+
+.sinopse-inuyasha {
+    background-image: url(img/Retangulo\ geleia.png);
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+
+.sinopse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7em 20em 0em 20em;
+}
+
+.titulo-sinopse {
+    text-align: center;
+    padding-bottom: 2em;
+    color: var(--branco-principal);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.texto-sinopse {
+    margin-top: 1em;
+    text-align: justify;
+    border-right: 2px solid var(--cor-geleia);
+    border-left: 2px solid var(--cor-geleia);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.link {
+    font-size: 14px;
+}
+
+.personagens-inuyasha {
+    background: linear-gradient(to right, #d3cbc7, #E3A587 );
+    margin-top: 1em;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.personagens-inuyasha h1 {
+    text-align: center;
+    padding-top: 4em;
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 3em;
+}
+
+.inu-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.personagens-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.personagens-container:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3),
+    0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.imagem-container img {
+    width:40%;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.info-personagens {
+    padding: 0.5em;
+}
+.nome {
+    font-weight: 700;
+}
+
+.titulo-buscar {
+    background-color: var(--cor-geleia);
+
+}
+.galeria_inuyasha{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-geleia);
+}
+
+.titulo-galeria {
+    padding: 4em 0 2em 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+
+.galeria {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria .imagens {
+    margin-top: 40px;
+    max-width: 95%;
+    columns: 3 340px;
+    gap: 15px;
+    
+}
+.imagens {
+    border-bottom: solid 2px var(--cor-geleia);
+}
+.imagens li {
+    padding-right:0;
+}
+.imagens img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    column-gap: 10px;
+    cursor: pointer;
+}
+#container-principal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65)
+}
+
+
+#container-interno {
+    position: relative;
+    height: 93%;
+}
+#imagem-ativa {
+    width: 100%;
+    height: 93%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    color: var(--preto-secundario);
+    font-weight: 700;
+    padding: 0.5em;
+    
+}
+
+#btn-fechar {
+    font-size: 30px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    background-color: transparent;
+    color: var(--branco-principal);
+    font-weight: 400;
+}
+
+#btn-proximo, #btn-voltar{
+    font-size: 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--branco-principal);
+    border: solid 2px var(--branco-principal);
+}
+
+#btn-voltar {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+
+}
+
+#btn-proximo {
+    position: absolute;
+    top: 50%;
+    right:5%;
+}
